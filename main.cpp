@@ -3,8 +3,15 @@ using namespace std;
 
 void pascal() {
     int liczba_wierszy;
-    cout << "Wpisz liczbe wierszy: ";
-    cin >> liczba_wierszy;
+    while(true) {
+        cout << "Wpisz liczbe wierszy: ";
+        cin >> liczba_wierszy;
+        if (liczba_wierszy <= 0) {
+            cout << "Wpisz dodatnia liczbe wierszy!\n\n";
+        } else {
+            break;
+        }
+    }
     int poprzedni_wiersz[liczba_wierszy] = {1, 1};
     cout << "\n";
     for (int i = 1;i<liczba_wierszy + 1;i++) {
